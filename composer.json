@@ -1,0 +1,30 @@
+{
+    "name": "suraj1716/onetimestripe",
+    "description": "Laravel contact form package",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Suraj1716\\Onetimestripe\\": "src/"
+        }
+    },
+
+"require": {
+        "stripe/stripe-php": "^10.0"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suraj1716\\Onetimestripe\\StripeServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "suraj shrestha"
+        }
+    ],
+    "minimum-stability": "dev"
+
+}
