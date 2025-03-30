@@ -22,6 +22,6 @@ class StripeServiceProvider extends ServiceProvider
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views','onetimestripe');
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations','contactform');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations','onetimestripe');
     }
 }
