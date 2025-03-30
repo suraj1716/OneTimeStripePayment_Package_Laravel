@@ -19,6 +19,11 @@ class StripeServiceProvider extends ServiceProvider
             __DIR__ . '/../config/config.php' => config_path('onetimestripe.php'),
         ], 'onetimestripe-config');
 
+        $this->publishes([
+            __DIR__ . '/../database/migrations' => database_path('migrations'),
+        ], 'migrations');
+
+
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views','onetimestripe');
