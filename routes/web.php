@@ -6,6 +6,9 @@ use Suraj1716\Onetimestripe\Http\Controllers\CartController;
 
 use Illuminate\Support\Facades\Route;
 
+
+
+Route::middleware(['guest','web'])->group(function(){
 Route::get('/products', [ProductController::class,'index']);
 // Route::post('/checkout', [StripeController::class,'checkout'])->name('checkout');
 // Route::get('/success', [StripeController::class, 'success'])->name('checkout.success');
@@ -21,4 +24,4 @@ Route::get('/cancel', [ProductController::class,'cancel'])->name('checkout.cance
     Route::get('/checkout/success', [CartController::class, 'success'])->name('checkout.success');
 // });
 
-
+});
